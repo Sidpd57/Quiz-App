@@ -9,41 +9,41 @@ const questions = [
         ]
     },
     {
-        question: "Which is largest animal in the world?",
+        question: "Who was the first to observe Saturn with a telescope?",
         answers: [
-            {text:"shark", correct: false},
-            {text:"Blue Whale", correct: false},
-            {text:"Elephant", correct: false},
-            {text:"Giraffe", correct: true}
+            {text:"Galileo Galilei", correct: true},
+            {text:"Issac Newton", correct: false},
+            {text:"Jacques Cassini", correct: false},
+            {text:"David H. Levy", correct: false}
         ]
     },
     {
-        question: "Which is largest animal in the world?",
+        question: "Which among the following is not a local wind?",
         answers: [
-            {text:"shark", correct: false},
-            {text:"Blue Whale", correct: false},
-            {text:"Elephant", correct: true},
-            {text:"Giraffe", correct: false}
+            {text:"Sirocco", correct: false},
+            {text:"Punas", correct: false},
+            {text:"Mistral", correct: false},
+            {text:"Kikuyu", correct: true}
         ]
     },
     {
-        question: "Which is largest animal in the world?",
+        question: "Which is the earliest stage of the Big Bang epoch ?",
         answers: [
-            {text:"shark", correct: true},
-            {text:"Blue Whale", correct: false},
-            {text:"Elephant", correct: false},
-            {text:"Giraffe", correct: false}
+            {text:"Planck epoch", correct: true},
+            {text:"Unification epoch", correct: false},
+            {text:"Inflationary epoch", correct: false},
+            {text:"Electroweak epoch", correct: false}
         ]
     },
     {
-        question: "Which is largest animal in the world?",
+        question: "The Isthmus of Potidea is located in which continent?",
         answers: [
-            {text:"shark", correct: false},
-            {text:"Blue Whale", correct: true},
-            {text:"Elephant", correct: false},
-            {text:"Giraffe", correct: false}
+            {text:"Asia", correct: false},
+            {text:"Africa", correct: false},
+            {text:"Europe", correct: true},
+            {text:"North America", correct: false}
         ]
-    }
+    },
 ];
 
 const questionElement = document.querySelector('.question')
@@ -68,7 +68,7 @@ function showQuestion(){
     
     currentQuestion.answers.forEach(ans => {
         const button = document.createElement('button')
-        button.innerHTML= ans.text;
+        button.textContent= ans.text;
         button.classList.add('btn')
         answerBtn.appendChild(button)
         if(ans.correct){
@@ -102,6 +102,8 @@ function selectAnswer(e){
     })
     nextBtn.style.display = 'block'
 }
+
+
 
 function showScore(){
     resetState()
